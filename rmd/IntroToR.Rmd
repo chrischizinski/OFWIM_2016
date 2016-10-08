@@ -1,0 +1,52 @@
+---
+title: "Getting to know R"
+author: "Christopher Chizinski"
+date: "August 12, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, out.width = 100, fig.retina = NULL, echo=FALSE}
+library(knitr)
+knitr::include_graphics("/Users/cchizinski2/Documents/OFWIM_2016/img/R.jpeg")
+```
+
+
+## What is R?
+
+R is an open-sourced computer language that allows you to conduct data analysis and programming  It is extremly versatile with almost 9000 packages that allow you to do pretty do anything, from spatial statistics to data wrangling to publication graphics.  In fact, this document was written with `R` and `Rstudio`.
+
+A reason for its acceptance among researchers ([5th place in IEEE language rankings](http://spectrum.ieee.org/static/interactive-the-top-programming-languages-2016) is its versatility.  R can be used as an *object-oriented programming language*, or as a statistical environment where functions can be run line-by-line to analyze data. 
+
+Why R?
+
+- R runs on Windows, Mac-OS, and Unix operating systems
+- R provides a vast number of useful statistical tools (and you can write your own)
+- R produces publication-quality graphics in a variety of formats
+- R allows you to generate documents and html 
+- R can be intergrated with many other programming languages.
+- R scales, making it useful for small and large projects.
+- There is a huge user base with lots of blogs and answers for your guarenteed many, many questions
+
+Why not R?
+
+- R can do a lot but it cannot do everything.
+- There is a decent learning curve
+- There have been many improvements over the years but some of the documentation can be opaque.
+- R will make you want to throw your computer through the wall at some point. 
+-  Contributed packages go through a lot of testing but some are better and more reliable than others 
+- R steers clear of point-and-click analysis
+
+
+## Where can I get R?
+It is best to download R from CRAN ([Comprehensive R Archive Network](https://cran.r-project.org/)).  It can be installed on  Linux, Windows, or Mac operating systems.  The current stable version will be available following the link to your operating system.  If you are installing on a Windows machine, you will want to select from the **base** link.  
+
+## How do I run R?
+There are many ways that you can run R (terminal to GUI).  You can run R from its basic GUI, while OK it does not have some of the bells and whistles other GUIs have.  
+
+My favorite GUI is [RStudio](https://www.rstudio.com/home/)  RStudio truly makes R easier to use. It includes a code editor with syntax highlighting, debugging, and visualization tools. 
+
+Using R, you have the options of running code from the console or by saving and reusing scripts.  I tend to only use the console for one off things, like pulling up a help page.  I keep all of my code in scripts which allows me to x

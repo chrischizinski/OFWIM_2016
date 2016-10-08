@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Getting to know R</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Getting to know R">
+  <meta name="author" content="Christopher Chizinski">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="libraries/widgets/interactive/css/aceeditor.css"></link>
+<link rel=stylesheet href="libraries/widgets/nvd3/css/nv.d3.css"></link>
+<link rel=stylesheet href="libraries/widgets/nvd3/css/rNVD3.css"></link>
+<link rel=stylesheet href="libraries/widgets/leaflet/external/leaflet.css"></link>
+<link rel=stylesheet href="libraries/widgets/leaflet/external/leaflet-rCharts.css"></link>
+<link rel=stylesheet href="libraries/widgets/leaflet/external/legend.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/style.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  <script src="libraries/widgets/nvd3/js/jquery-1.8.2.min.js"></script>
+<script src="libraries/widgets/nvd3/js/d3.v3.min.js"></script>
+<script src="libraries/widgets/nvd3/js/nv.d3.min-new.js"></script>
+<script src="libraries/widgets/nvd3/js/fisheye.js"></script>
+<script src="libraries/widgets/leaflet/external/leaflet.js"></script>
+<script src="libraries/widgets/leaflet/external/leaflet-providers.js"></script>
+<script src="libraries/widgets/leaflet/external/Control.FullScreen.js"></script>
+
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='300px' src="assets/img/R.jpeg">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/huntfish.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Getting to know R</h1>
+    <h2>A brief introduction</h2>
+    <p>Christopher Chizinski<br/>Assistant Professor</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    <style type="text/css">
+body {background:grey transparent;
+}
+</style>
+
+<h2>Who am I?</h2>
+
+<p><img style="float: right;" src="me.jpeg"></p>
+
+<ul class = "build incremental">
+<li>Assistant professor of Human Dimensions of Wildlife Management in the <a href="http://snr.unl.edu/">School of Natural Resources</a> at the <a href="http://www.unl.edu/">University of Nebraska-Lincoln</a></li>
+<li>R enthusiast since 2007</li>
+<li>Contact and info
+
+<ul>
+<li>Email: <a href="mailto:cchizinski2@unl.edu">cchizinski2@unl.edu</a></li>
+<li>Lab website:  <a href="http://chrischizinski.github.io/">http://chrischizinski.github.io/</a></li>
+<li>Github:  <a href="https://github.com/chrischizinski">https://github.com/chrischizinski</a></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-2" style="background:lightblue;">
+  <hgroup>
+    <h1>About this course ...</h1>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Purpose</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The purpose of this series is to provide a basic introduction to R, how to import and export data from R, how to wrangle data once you get it ito R, and then how to create presentation and publication quality graphics in R.  The course will pull strongly from the <a href="http://adolfoalvarez.cl/the-hitchhikers-guide-to-the-hadleyverse/">hadleyverse</a>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Repositories</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img style="float: right;" src="figure/github.png"></p>
+
+<p>I will provide a copies of all the R code, presentations, and (potentially) the recorded webinars through <code>github</code>.  I have set up a repository through <a href="https://github.com/chrischizinski/OFWIM_2016">https://github.com/chrischizinski/OFWIM_2016</a> as well as a <a href="https://chrischizinski.github.io/OFWIM_2016/">github-page</a> for the course.  </p>
+
+<p>Feel free to contact me anytime for questions. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-5" style="background:lightblue;">
+  <hgroup>
+    <h1>Let&#39;s get started ...</h1>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What is R?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>R is an open-sourced, <a href="http://adv-r.had.co.nz/OO-essentials.html">object-oriented</a> computer language 
+
+<ul>
+<li>data analysis </li>
+<li>programming</li>
+<li>graphics </li>
+</ul></li>
+<li>Extremly versatile with almost 9000 packages
+
+<ul>
+<li><a href="http://spectrum.ieee.org/static/interactive-the-top-programming-languages-2016">5th place in IEEE language rankings</a></li>
+<li>This document was written with R, Rstudio, and the <code>slidify</code> package</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Why R?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>R runs on Windows, Mac-OS, and Unix operating systems</li>
+<li>R provides a vast number of useful statistical tools (and you can write your own)</li>
+<li>R produces publication-quality graphics in a variety of formats</li>
+<li>R allows you to generate documents and html </li>
+<li>R can be integrated with many other programming languages</li>
+<li>R scales, making it useful for small and large projects</li>
+<li>There is a huge user base with lots of blogs and answers for your many, many questions</li>
+<li>R steers clear of point-and-click analysis</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Why not R?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>R can do a lot but it cannot do everything.</li>
+<li>There is a decent learning curve</li>
+<li>There have been many improvements over the years but some of the documentation can be opaque.</li>
+<li>R will make you want to throw your computer through the wall at some point. </li>
+<li> Contributed packages go through a lot of testing but some are better and more reliable than others </li>
+<li>R steers clear of point-and-click analysis</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Where can I get R?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Download R from CRAN (<a href="https://cran.r-project.org/">Comprehensive R Archive Network</a>)</li>
+<li>It can be installed on  Linux, Windows, or Mac operating systems.<br>
+
+<ul>
+<li>Choose the current stable version </li>
+<li>If you are downloading for PC, I would also download <code>RTools</code></li>
+</ul></li>
+<li>Update FREQUENTLY</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How do I run R?</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Base R</h3>
+
+<ul>
+<li>Many ways that you can run R (terminal to GUI).<br></li>
+<li>Let&#39;s open up base R</li>
+<li>Basic
+
+<ul>
+<li> while OK it does not have some of the bells and whistles other GUIs have.<br></li>
+</ul></li>
+</ul>
+
+<h3>RStudio</h3>
+
+<ul>
+<li><a href="https://www.rstudio.com/home/">RStudio</a> </li>
+<li>Let&#39;s open up RStudio
+
+<ul>
+<li>includes a code editor with syntax highlighting, debugging, and visualization tools</li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf">Cheatsheet</a></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Running R</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li> Console
+
+<ul>
+<li>Only for &quot;one off&quot; things, installing packages etc. </li>
+</ul></li>
+<li>Script editor
+
+<ul>
+<li>keep all of my code in scripts </li>
+<li>reuse code and run things again at a later time</li>
+<li><a href="https://www.crcpress.com/Reproducible-Research-with-R-and-R-Studio-Second-Edition/Gandrud/p/book/9781498715379">Reproducible Research</a></li>
+<li>Good housekeeping is to label script files
+
+<ul>
+<li><code>bird_analysis-08-17-16.R</code> </li>
+</ul></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How do I learn R?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>R is not easy.<br></li>
+<li>Best strategy is <strong>immersion</strong>, <strong>immersion</strong>, <strong>immersion</strong>!</li>
+<li>R is no different than other foreign languages</li>
+<li>Recognize the nuances of the language 
+
+<ul>
+<li>use it to its fullest ability (even if this requires hacks and work-arounds)</li>
+</ul></li>
+<li>Payoff is HUGE!</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Hiccups in R</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Newbies to R (myself included) tend to get hung up on three primary areas when learning R:</p>
+
+<ol class = "build incremental">
+<li>Getting data into R</li>
+<li>Understanding the structure of your data (e.g., selecting columns and rows)</li>
+<li>Understanding the error messages</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How do I get help in R?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The beauty of R and its large and diverse user base is that there is a lot of help out there for you.  There are sources that tend to be more prickley (e.g., <a href="https://www.r-project.org/mail.html">R mailing lists</a>), to moderatly so (e.g., <a href="http://stackoverflow.com/questions/tagged/r">stackoverflow</a>), and most forgiving (e.g., <a href="https://groups.google.com/forum/#!forum/unmarked">google groups</a>).</p>
+
+<p>There tend to be three areas that I think students learning R get tripped up on when trying to find help.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>First:  &quot;How do I do so and so in R?&quot;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Call up your favorite search engine and do a search for your question (and add &quot;in R&quot;).  For example, to search how to do a linear regression in R, I would pull up google and search &quot;linear regression and R.&quot;  Generally, your search results will include tutorials, packages, or questions posted on the online help sites.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Second:  &quot;How do I use this function in R?&quot;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Like the first bullet you can always do a search and come up with an answer.  There are several ways to find help within R for a particular function.  <code>help(function_name)</code> or <code>?function_name</code> will bring up the documentation on the particular function you are interested in.  This is where I almost always start when I am having issues with a particular function because the pages called will have the input parameters and various options.  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Third:  &quot;What does this warning or error mean?&quot;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Part of this will come as you spend more and more time learning the R language but everyonce in a while you will get an error that you have no clue.  Very often I will copy that error from the console and past it into google.     </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Finally asking for help</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img style="float: center;" src="figure/noreproexample.png"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Finally asking for help</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The key to getting good feedback no matter from what source is to:</p>
+
+<ol>
+<li>Google search the issue.  It is more than likely that someone else has already had the issue</li>
+<li>Do not make it seem like you are asking questions about a homework assignment</li>
+<li>provide a <a href="http://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example">reproducible example</a>.<br></li>
+</ol>
+
+<p>I think going through the process of trying to make a reproducible example ends up helping you solve your issue before you even post to one of the help sites. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-20" style="background:lightblue;">
+  <hgroup>
+    <h1>That is all I had for today ...</h1>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Next webinar</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Next time getting data into R and basic data structures</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-22" style="background:lightblue;">
+  <hgroup>
+    <h1>Questions?</h1>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='About this course ...'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Purpose'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Repositories'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Let&#39;s get started ...'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='What is R?'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Why R?'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Why not R?'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Where can I get R?'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='How do I run R?'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Running R'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='How do I learn R?'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Hiccups in R'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='How do I get help in R?'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='First:  &quot;How do I do so and so in R?&quot;'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Second:  &quot;How do I use this function in R?&quot;'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Third:  &quot;What does this warning or error mean?&quot;'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Finally asking for help'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Finally asking for help'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='That is all I had for today ...'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Next webinar'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Questions?'>
+         22
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="libraries/widgets/interactive/js/ace/js/ace.js"></script>
+<script src="libraries/widgets/interactive/js/opencpu-0.5.js"></script>
+<script src="libraries/widgets/interactive/js/interactive.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

@@ -3,6 +3,12 @@ layout: page
 title: OFWIM 2016 R Workshop
 ---
 
+<img style="float: left;" src="/OFWIM_2016/img/logo_roundearthtone.png">
+
+<img style="float: right;" src="/OFWIM_2016/img/R.jpeg">
+
+
+
 ## Welcome to page for the OFWIM R Workshop
 This is the repository for materials covered in the R Workshop on Data Wrangling and Visualization.
 
@@ -16,7 +22,7 @@ We will have a lot to cover in today's workshop.  As mentioned in the last webin
 
 ## Schedule 
 
-| Time  |  Topic |  
+| Time  |  Topic - links to lesson |  
 |---|---|
 |8:00 - 9:00   | [`tidyr` and `dplyr`](https://chrischizinski.github.io/SNR_R_Group/2016-09-23-Wrangling) <br> [Joining datasets](https://chrischizinski.github.io/SNR_R_Group/2016-09-29-Joining_Data_Sets) |
 |9:00 - 10:00   | [Basic plotting with `ggplot2`](https://chrischizinski.github.io/SNR_R_Group/2016-10-03-BasicPlots) |
