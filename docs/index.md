@@ -3,11 +3,6 @@ layout: page
 title: OFWIM 2016 R Workshop
 ---
 
-
-<img style="float: right;" src="/OFWIM_2016/figs/logo_roundearthtone.png">
-
-
-
 ## Welcome to page for the OFWIM R Workshop
 This is the repository for materials covered in the R Workshop on Data Wrangling and Visualization.
 
