@@ -4,7 +4,7 @@ title: OFWIM 2016 R Workshop
 ---
 
 
-<img style="float: right;" src="/OFWIM_2016/img/logo_roundearthtone.png">
+<img style="float: right;" src="/OFWIM_2016/img/R.jpeg">
 
 
 
