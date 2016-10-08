@@ -1,15 +1,15 @@
 # --- Serving options --- #
 # If you are building a GitHub project page then use these settings:
 # url is the full website URL
-url: "https://chrischizinski.github.io/SNR_R_Group/"
+url: "https://chrischizinski.github.io/OFWIM_2016/"
 # baseurl is the website's URL without the hostname
-baseurl: "/SNR_R_Group"
+baseurl: "/OFWIM_2016"
 
 # Name of website
-title: SNR_R_Group
+title: OFWIM_2016
 
 # Short description of your site
-description: Repository for SNR's R User Group
+description: Repository for OFWIM 2016 R Workshop
 
 # --- Navigation bar options --- #
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -18,8 +18,6 @@ description: Repository for SNR's R User Group
 # List of links in the navigation bar
 navbar-links:
   Home: "index"
-  Schedule: "schedule"
-  Lessons: "blog"
   Contact: "contact"
 
 
@@ -41,7 +39,7 @@ footer-links-active:
   stackoverflow: false
 
 # How to display the link to the website in the footer
-url-pretty: "chrischizinski.github.io/SNR_R_Group/"
+url-pretty: "chrischizinski.github.io/OFWIM_2016/"
 
 # --- Pagination options --- #
 paginate: 5
